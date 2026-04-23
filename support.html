@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Lunula</title>
+  <meta name="description" content="Get help with Lunula, the private cycle tracking app. Browse common questions or send us a message.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+
+<div class="top-bar" aria-hidden="true"></div>
+
+<!-- ─── Navigation ─────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/icon.png" alt="Lunula icon">
+      Lunula
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#privacy">Privacy</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="support.html#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page hero ──────────────────────────────────────────────────────── -->
+<section class="page-hero-section">
+  <div class="container">
+    <div class="page-hero">
+      <span class="section-label">Help &amp; Support</span>
+      <h1>How can we help?</h1>
+      <p>
+        Browse common questions below, or send us a message. We typically respond within 1–2 business days.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ────────────────────────────────────────────────────────────── -->
+<section class="section" id="faq" style="padding-top: 0;">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <span class="section-label">Common questions</span>
+      <h2 class="section-heading" style="margin-bottom: 36px;">Frequently asked</h2>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Is my data really private? How can I verify this?</summary>
+          <div class="faq-body">
+            <p>Yes — completely. Lunula stores all data in your device's local storage and makes no network requests during normal operation. You can verify this yourself using a network monitoring tool (e.g. Little Snitch on macOS, or a proxy like Charles) while using the app — you will see zero outbound traffic.</p>
+            <p>The privacy guarantee is architectural: there are no servers to send data to, not just a policy that could change.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>I forgot my PIN. How do I reset it?</summary>
+          <div class="faq-body">
+            <p>If you have biometric unlock (Face ID or fingerprint) enabled, you can use that to access the app. From inside the app, go to <strong>Settings → Security → Change PIN</strong> to set a new one.</p>
+            <p>If you have forgotten both your PIN and do not have biometric access, you will need to reset the app. Go to <strong>Settings → Data → Reset all data</strong>. This will clear all data and remove the PIN lock. Unfortunately, without your PIN we cannot access the encrypted data on your behalf.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I back up and restore my data?</summary>
+          <div class="faq-body">
+            <p>In the app, go to <strong>Settings → Data → Export encrypted backup</strong>. You'll be asked to set a passphrase — this is used to encrypt your backup file with AES-256-GCM. Save the exported file somewhere safe (iCloud Drive, local storage, etc.).</p>
+            <p>To restore, go to <strong>Settings → Data → Import backup</strong>, select the file, and enter your passphrase. Keep your passphrase safe — without it the backup cannot be decrypted by anyone, including us.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>I lost my backup passphrase. Can you recover my data?</summary>
+          <div class="faq-body">
+            <p>No — and this is by design. Your passphrase never leaves your device. The backup encryption is strong enough that recovery without the passphrase is not feasible. We strongly recommend storing your passphrase in a password manager.</p>
+            <p>If you still have the app installed on your device, your live data is unaffected — only the encrypted backup requires the passphrase.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why don't my predictions match my actual cycle?</summary>
+          <div class="faq-body">
+            <p>Lunula's predictions improve as you log more cycles. For the first 1–2 cycles, predictions are based on typical averages. Over time, the app learns your personal cycle length and phase durations. Try to log your period start and end dates consistently for the most accurate predictions.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Lunula work offline?</summary>
+          <div class="faq-body">
+            <p>Yes — entirely. Lunula requires no internet connection at any point. All features work offline, including cycle tracking, daily logging, predictions, and the exercise guides. The only optional online activity is if you choose to save your encrypted backup to a cloud storage provider you control.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I delete all my data?</summary>
+          <div class="faq-body">
+            <p>Go to <strong>Settings → Data → Reset all data</strong> in the app. This permanently deletes everything stored by Lunula on your device. You can also simply uninstall the app, which removes all associated data. Because we hold no data on servers, there is nothing further to delete.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is Lunula free? Are there in-app purchases?</summary>
+          <div class="faq-body">
+            <p>Lunula is free to use. It is not yet publicly available on the App Store or Google Play — check back here for updates.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which platforms does Lunula support?</summary>
+          <div class="faq-body">
+            <p>Lunula is being built for iOS (iPhone and iPad) and Android. It is not yet publicly available — check this site for launch updates.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact form ────────────────────────────────────────────────────── -->
+<section class="section" id="contact" style="padding-top: 0; padding-bottom: 80px;">
+  <div class="container">
+    <div class="support-grid">
+      <!-- Form -->
+      <div>
+        <div class="support-form-card" id="form-card">
+          <h2>Send us a message</h2>
+          <p>We aim to respond within 1–2 business days.</p>
+
+          <form id="support-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+                <input type="text" id="last-name" name="last_name" placeholder="Smith">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              <p class="form-note">We'll only use this to reply to your message.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="bug">Bug report</option>
+                <option value="data">Data &amp; privacy question</option>
+                <option value="backup">Backup &amp; restore</option>
+                <option value="account">Account / PIN</option>
+                <option value="feature">Feature request</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="platform">Platform <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+              <select id="platform" name="platform">
+                <option value="" disabled selected>iOS / Android / Both</option>
+                <option value="ios">iOS (iPhone / iPad)</option>
+                <option value="android">Android</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Describe your question or issue in as much detail as you can…" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;">
+                <input type="checkbox" name="privacy_consent" required style="width:auto;margin-top:3px;">
+                <span style="font-size:0.85rem;color:var(--text-secondary);">
+                  I understand my email will be used only to respond to this message and won't be stored beyond our conversation.
+                </span>
+              </label>
+            </div>
+
+            <div class="h-captcha" data-sitekey="68fced36-7b1a-4ad2-ba2e-a1c44cfaf1ee"></div>
+
+            <div id="form-error" class="form-error" role="alert" aria-live="polite"></div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send message
+            </button>
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div class="support-form-card form-success" id="form-success">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="24" fill="#E0F2F1"/>
+            <path d="M16 24l6 6 10-12" stroke="#00897B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Message sent!</h3>
+          <p>Thanks for reaching out. We'll get back to you within 1–2 business days.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="support-sidebar">
+        <div class="privacy-note-card">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> A note on privacy</h3>
+          <p>
+            When you contact support, your email and message are the only things we receive.
+            We don't have access to your app data, cycle logs, or any health information —
+            it's all stored on your device only.
+          </p>
+          <p style="margin-top: 10px;">
+            Please don't include health data in your support message.
+          </p>
+        </div>
+
+        <div class="support-info-card">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg> Before you write</h3>
+          <ul>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></span>
+              <span>Include your device model and OS version (iOS/Android settings → About)</span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></span>
+              <span>Include the app version (Settings → About in Lunula)</span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></span>
+              <span>Describe the steps to reproduce any bug you've found</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="support-info-card">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg> Response times</h3>
+          <ul>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+              <span>General questions: 1–2 business days</span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.81-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg></span>
+              <span>Bug reports: 2–3 business days</span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+              <span>We reply to the email address you provide</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="support-info-card kofi-card">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Support Lunula</h3>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;margin-bottom:14px;">Lunula is free and privately funded. If it's been useful to you, buying us a coffee helps keep development going.</p>
+          <a href="https://ko-fi.com/lunula_app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width:100%;justify-content:center;font-size:0.875rem;padding:10px 16px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+            Support on Ko-fi
+          </a>
+        </div>
+
+        <div class="support-info-card">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Helpful links</h3>
+          <ul>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>
+              <span><a href="privacy.html">Privacy Policy</a></span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></span>
+              <span><a href="#faq">Frequently asked questions</a></span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></span>
+              <span><a href="index.html">Lunula — coming soon</a></span>
+            </li>
+            <li>
+              <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></span>
+              <span><a href="https://github.com/lunula-app" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ───────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/icon.png" alt="Lunula icon">
+          Lunula
+        </div>
+        <p class="footer-desc">Your private cycle companion. All data stays on your device. Always.</p>
+      </div>
+      <div class="footer-links">
+        <h4>App</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="https://ko-fi.com/lunula_app" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a></li>
+          <li><a href="https://github.com/lunula-app" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal &amp; Support</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lunula. All rights reserved.</span>
+      <span>Made with care for your privacy.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FAQ accordion styles -->
+<style>
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 18px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-primary);
+  transition: background 0.15s;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--teal-600);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary:hover { background: var(--teal-50); }
+
+.faq-item[open] summary { background: var(--teal-50); }
+
+.faq-body {
+  padding: 0 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-body p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>
